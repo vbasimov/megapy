@@ -1,0 +1,23 @@
+{% extends 'debtApp/layout.html' %}
+
+{% block content %}
+<br><br><br>
+  <div class="container">
+    <div class="bd-callout bd-callout-warning custom-row">
+      <h6 class="col-6">Для удобного добавления записей попробуйте загрузку из файла. <a href="/xls/template">Скачайте </a>пример файла для импорта</h6>
+      <form class="col-6" action="debts" method="POST" enctype="multipart/form-data">
+        <form-group></form-group>
+        <input class="file invisible position-absolute" type="file" name="file"/>
+        <div class="input-group">
+          <input class="form-control input-sm" type="text" disabled="" placeholder="Загрузить файл с расширением .xls или .xlsx"/>      <span class="input-group-btn">
+            <button class="browse btn btn-business-blue input-sm" type="button"><i class="glyphicon glyphicon-search"></i> Открыть</button></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="jsGrid"></div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'debtApp/layout.html' %}
+
+{% block content %}
+
+  <div class="carousel slide" id="myCarousel" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active"><img class="first-slide" src="/static/images/162204.jpg" alt="Первый слайд"/>
+        <div class="container">
+          <div class="carousel-caption text-left"><br/>
+            <h1>Реестр<br>задолженностей</h1>
+            <p>
+              Добавляйте и просматривайте задолженности
+              по услугам,<br>неоплаченным в Системе компании
+            </p>
+            <p><a class="btn btn-lg btn-business-blue" href="/debts" role="button">Попробовать сейчас</a></p>
+            <p>Нет аккаунта? Просто <a href="/register")>зарегистрируйтесь</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item"><img class="second-slide" src="static/images/162204NY.jpg" alt="Второй слайд"/>
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Реестр<br>задолженностей</h1>
+            <p>
+              Желает Вам финансового благополучия<br>
+              в 2019 году!
+            </p>
+            <p><a class="btn btn-lg btn-business-blue" href="/debts" role="button">Попробовать сейчас</a></p>
+            <p>Нет аккаунта? Просто <a href="/register")>зарегистрируйтесь</a>   </p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Предыдущий</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Следующий</span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+  <p></p>
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Доступность</h2>
+        <p>Разработан как для отдельных, так и для корпоративных пользователей.</p>
+      </div>
+      <div class="col-md-4">
+        <h2>Универсальность</h2>
+        <p>Подходит для разнообразных видов финансовой деятельности, включая коммерческую деятельность и любые другие случаи, когда необходимо отслеживание и управление денежными ресурсами.</p>
+      </div>
+      <div class="col-md-4">
+        <h2>Функциональность</h2>
+        <p>Данный сервис предоставляет Вам возможность просмотреть задолженность по услугам, неоплаченных в Системе компании.</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

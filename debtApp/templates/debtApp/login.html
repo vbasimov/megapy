@@ -1,0 +1,18 @@
+{% extends 'debtApp/layout.html' %}
+
+{% block content %}
+
+  <div class="authpage"></div>
+  <div class="text-center">
+    <form class="form-signin" role="form" action="/login" method="post">
+      <h1 class="h3 mb-3 font-weight-normal">Авторизация </h1>
+      <label class="sr-only" for="inputEmail">Адрес электронной почты</label>
+      <input class="form-control" id="inputEmail" type="email" name="username" placeholder="Адрес электронной почты" required="" autofocus=""/>
+      <label class="sr-only" for="inputPassword">Пароль</label>
+      <input class="form-control" id="inputPassword" type="password" name="password" placeholder="Пароль" required=""/>
+      <button class="btn btn-lg btn-business-blue btn-block" type="submit">Войти</button>
+      <p><br/>Нет аккаунта? <a href="/register")>Зарегистрируйтесь</a></p>
+    </form>
+  </div>
+
+{% endblock %}

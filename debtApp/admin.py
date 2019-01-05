@@ -1,3 +1,4 @@
 from django.contrib import admin
+from debtApp.models import Debt
 
-# Register your models here.
+admin.site.register(Debt)

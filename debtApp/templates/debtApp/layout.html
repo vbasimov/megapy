@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js'%}"></script>
+  <title>Реестр задолженностей</title>
+</head>
+<body class="backgrounded">
+
+  <nav class="navbar navbar-expand-md fixed-top">
+    <a class="navbar-brand" href="/">Реестр задолженностей</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto"></ul>
+      <form class="form-inline my-2 my-lg-0"><a class="btn btn-outline-light" href="/register" role="button">Зарегистрироваться</a>&nbsp&nbsp
+        <a class="btn btn-outline-light" href="/login" role="button">Войти</a>
+      </form>
+    </div>
+  </nav>
+  <main role="main">
+    {% block content %}
+    {% endblock%}
+  </main>
+
+  <div class="card-footer text-muted">
+    <div class="container">
+      <div class="d-flex justify-content-between d-highlight align-items-center mb-2">
+        <div class="p-2 bd-highlight">2018 &copy Басимов Владислав
+          <div class="image-block"><img class="icon-contact" src={% static '/images/smartphone.svg' %}>&nbsp+7(911) 433-96-98</div>
+          <div class="image-block"><img class="icon-contact" src={% static '/images/mail.svg' %}>&nbspvabsoluter@gmail.com</div>
+        </div>
+        <div class="p-2 bd-highlight"></div>
+        <div class="p-2 bd-highlight"><a class="badge badge-business-blue" href="https://bitbucket.org/vabsoluter/megaPy">source code: megaPy </a></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

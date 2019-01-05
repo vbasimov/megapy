@@ -1,0 +1,284 @@
+.carousel-caption {
+ color: #343a40 !important
+}
+
+.authpage {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  margin-top: 35px;
+}
+
+.backgrounded {
+  background-image: url("/static/images/500971.jpg");
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.glyph-icon svg {
+  width:16px;
+  height:16px;
+}
+
+.debts-table {
+    width:80%
+}
+
+.custom-but {
+  outline: 0 !important;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.upd-but {
+  background: url("/images/si-glyph-edit.svg") no-repeat;
+}
+
+.del-but {
+  background: url("/images/si-glyph-delete.svg") no-repeat;
+}
+
+.carousel-caption {
+  left: unset;
+  right: unset;
+}
+
+#sad-smile{
+  text-align: center;
+  margin-top: 7%;
+  margin-bottom: 3%;
+  width: 10%;
+}
+
+.error-text {
+  color: #777777;
+  margin: -20px 0px;
+  text-align: center !important;
+}
+
+.err-num {
+  font-size: 85px;
+  color: #007BFF;
+}
+
+.icon-contact {
+  width: 15px;
+}
+
+.icon-alert-close {
+  width: 15%;
+  cursor: pointer;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 130px;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0%;
+}
+
+.card-footer .p-2 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.jsgrid-nodata-row {
+  text-align:center;
+}
+
+#jsGrid {
+  margin-bottom: 125px;
+}
+
+.bd-callout {
+
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #eee;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+}
+
+.bd-callout-primary {
+  border-left-color: #007bff;
+}
+
+.custom-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.image-block {
+  font-size: 0.7em
+}
+
+a, a:hover {
+  color: #4B587C;
+}
+
+.navbar-brand, .navbar-brand:hover  {
+  color: white;
+}
+
+.btn-business-blue {
+  background-color: #4B587C;
+  color: white;
+}
+
+.btn-business-blue:hover {
+  background-color: #283360;
+  color: white;
+}
+
+.badge-business-blue {
+  background-color: #4B587C;
+  color: white;
+}
+
+.badge-business-blue:hover {
+  background-color: #283360;
+  color: white;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 0px !important;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 25rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* min-width: 80%; */
+  height: 25rem;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: 9%;
+}
+
+.navbar {
+  padding: .5rem .5rem;
+  background-color: #4B587C;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    line-height: 1.0;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
