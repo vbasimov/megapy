@@ -17,11 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from debtApp import views
 
+from django.contrib.auth.views import LoginView, LogoutView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('register', views.register, name='register'),
-    path('login', views.login, name='login'),
+    path('register/', views.register, name='register'),
+    path('login/', LoginView.as_view(template_name='debtApp/login.html'), name='login'),
+    path('logout', LogoutView.as_view(next_page = '/'), name = 'logout'),
     path('error', views.error, name='error'),
     path('debts', views.debtGrid, name='debt-grid')
 ]

@@ -42,6 +42,15 @@
   border-top-right-radius: 0;
 }
 
+.form-signin .form-group {
+    margin-bottom: 0px;
+}
+
+label[for="id_username"], label[for="id_password"]
+{
+    display:none !important;
+}
+
 hr {
   -moz-border-bottom-colors: none;
   -moz-border-image: none;
