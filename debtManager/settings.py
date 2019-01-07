@@ -79,10 +79,16 @@ WSGI_APPLICATION = 'debtManager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django_db',
+        'USER' : 'django',
+        'PASSWORD' : 'fg0vpazo',
+        'HOST' : '127.0.0.1',
+        'PORT' : '5432',
     }
 }
+
+
 
 
 # Password validation
@@ -124,3 +130,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
+
+FILE_UPLOAD_HANDLERS = (
+    "django_excel.ExcelMemoryFileUploadHandler",
+    "django_excel.TemporaryExcelFileUploadHandler"
+)

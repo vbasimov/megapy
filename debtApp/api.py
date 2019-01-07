@@ -2,6 +2,7 @@ from django.http import JsonResponse, HttpResponse, QueryDict
 from .models import Debt
 from debtApp.serializers import DebtSerializer
 from django.views.decorators.csrf import csrf_exempt
+from django.forms.models import model_to_dict
 
 @csrf_exempt
 def allDebts(request):
