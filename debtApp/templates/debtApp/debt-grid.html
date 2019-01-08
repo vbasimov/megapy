@@ -4,28 +4,38 @@
 {% block content %}
 <br/><br/><br/>
   <div class="container">
+    {% if message.status == 'bad' %}
+      <div class="alert alert-danger align-items-center custom-row" id="alert-err" role="alert">
+        <div class="col-10">{{ message.text }}</div>
+        <div class="col-2 text-right"><a onclick="hideErrMessage()"><img class="icon-alert-close" src={% static '/images/si-glyph-button-error.svg' %}/></a></div>
+      </div>
+    {% elif message.status == 'good' %}
+      <div class="alert alert-ok alert-success align-items-center custom-row" id="alert-ok" role="alert">
+        <div class="col-10">{{ message.text }}</div>
+        <div class="col-2 text-right"><a onclick="hideSuccessMessage()"><img class="icon-alert-close" src={% static '/images/si-glyph-button-error.svg' %}/></a></div>
+      </div>
+    {% endif %}
     <div class="bd-callout bd-callout-warning custom-row">
       <h6 class="col-6">Для удобного добавления записей попробуйте загрузку из файла. <a href="/xls/template">Скачайте </a>пример файла для импорта</h6>
       <form class="col-6" action="debts" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-        <form-group></form-group>
-        <input class="file invisible position-absolute" type="file" name="file"/>
         <div class="input-group">
-          <input class="form-control input-sm" type="text" disabled="" placeholder="Загрузить файл с расширением .xls или .xlsx"/>      <span class="input-group-btn">
-            <button class="browse btn btn-business-blue input-sm" type="button"><i class="glyphicon glyphicon-search"></i> Открыть</button></span>
+          <input class="file invisible position-absolute" type="file" name="file"/>
+          <input class="form-control input-sm" type="text" disabled="" placeholder="Загрузить файл с расширением .xls или .xlsx"/>
+          <span class="input-group-btn">
+            <button class="browse btn btn-business-blue input-sm" type="button"></i> Открыть</button>
+          </span>
         </div>
       </form>
     </div>
   </div>
-
   <div class="container">
     <div id="jsGrid"></div>
   </div>
-
-{% block scripts %}
-    <script src={% static '/js/jsgrid.min.js' %}></script>
-    <script src={% static 'js/debt-grid.js' %}></script>
-{% endblock %}
+  {% block scripts %}
+      <script src={% static '/js/jsgrid.min.js' %}></script>
+      <script src={% static 'js/debt-grid.js' %}></script>
+  {% endblock %}
 
 {% endblock %}
 
