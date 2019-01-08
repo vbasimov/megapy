@@ -3,6 +3,7 @@ from debtApp.forms import UserForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
+from debtApp import grid
 
 def index(request):
     return render(request, 'debtApp/index.html', {})
@@ -19,12 +20,8 @@ def register(request):
                 username = userForm.cleaned_data['username'],
                 password = userForm.cleaned_data['password']
             ))
-            return redirect(debtGrid)
+            return redirect(grid.debtGrid)
     return render(request, 'debtApp/register.html', {'userForm': userForm})
 
 def error(request):
     return render(request, 'debtApp/error.html', {})
-
-@login_required(login_url = 'login')
-def debtGrid(request):
-    return render(request, 'debtApp/debt-grid.html', {})
