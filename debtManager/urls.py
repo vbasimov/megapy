@@ -15,11 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-<<<<<<< HEAD
 from debtApp import views, api, grid, xlsOps
-=======
-from debtApp import views, api, grid
->>>>>>> d0ab8a1f9ac7c07cc8c9177079976d2834b6ef2f
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
