@@ -23,5 +23,8 @@ def register(request):
             return redirect(grid.debtGrid)
     return render(request, 'debtApp/register.html', {'userForm': userForm})
 
-def error(request):
-    return render(request, 'debtApp/error.html', {})
+def error404(request):
+    return render(request, 'debtApp/error.html', {'status': 404, 'message': 'Страница не найдена'})
+
+def error500(request):
+    return render(request, 'debtApp/error.html', {'status': 500, 'message': 'Внутренняя ошибка сервера'})

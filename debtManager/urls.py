@@ -18,6 +18,9 @@ from django.urls import path
 from debtApp import views, api, grid, xlsOps
 from django.contrib.auth.views import LoginView, LogoutView
 
+handler404 = views.error404
+handler500 = views.error500
+
 urlpatterns = [
 
     #admin paths
@@ -28,7 +31,7 @@ urlpatterns = [
     path('register', views.register, name='register'),
     path('login', LoginView.as_view(template_name='debtApp/login.html'), name='login'),
     path('logout', LogoutView.as_view(next_page = '/'), name = 'logout'),
-    path('error', views.error, name='error'),
+    path('error404', views.error404, name='error404'),
 
     #api paths
     path('debts/api', api.allDebts),
@@ -36,7 +39,7 @@ urlpatterns = [
     path('debts/<int:debt_id>/update', api.debtUpdate),
     path('debts/<int:debt_id>/delete', api.debtDelete),
 
-    #grid path=
+    #grid path
     path('debts', grid.debtGrid),
 
     #xls path

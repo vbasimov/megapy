@@ -1,11 +1,13 @@
 {% extends 'debtApp/layout.html' %}
+{% load staticfiles %}
 
 {% block content %}
-
   <div>
-    <div class="image-block text-center"><img id="sad-smile" src="/static/images/sad.png"/></div>
-    <h1 class="error-text err-num"></h1>
-    <h2 class="error-text"></h2>
+    <div class="image-block text-center">
+      <img id="sad-smile" src={% static "/images/sad.png" %}/>
+    </div>
+    <h1 class="error-text err-num">{{ status }}</h1>
+    <h2 class="error-text">{{ message }}</h2>
   </div>
 
 {% endblock %}
