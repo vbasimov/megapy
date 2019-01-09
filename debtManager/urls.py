@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from debtApp import views, api, grid
+from debtApp import views, api, grid, xlsOps
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
@@ -37,5 +37,8 @@ urlpatterns = [
     path('debts/<int:debt_id>/delete', api.debtDelete),
 
     #grid path
-    path('debts', grid.debtGrid)
+    path('debts', grid.debtGrid),
+
+    #xls path
+    path('xls/template', xlsOps.downloadAsAttachment, {'file_type': 'xlsx', 'file_name': 'Template'}, name='template')
 ]
